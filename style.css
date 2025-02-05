@@ -1,3 +1,9 @@
+body{
+    background-color: #304a7d;
+}
+
+
+
 /* homepage */
 .container {
 	display: grid;
@@ -44,13 +50,21 @@ ul {
 
 }
 
+a {
+    text-decoration: none;
+    color: #d7f8feba;
+}
+
+a:hover {
+    color: #19a0c9; 
+}
+
 .title {
     font-size: 40px;
     margin-top: 0%;
     padding: 0px 0%;
 }
 
-/* text */
 p {
     padding: 5vh 20%;
 }
