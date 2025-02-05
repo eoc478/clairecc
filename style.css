@@ -1,0 +1,40 @@
+body {
+    margin: 0vh 10vh; 
+    padding: 10vh 0vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /*vertical center*/
+    align-items: center; /*horizontal center*/
+    min-height: 100vh; 
+}
+
+
+/* homepage */
+.container {
+	display: grid;
+    gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+    text-align: center;
+    font-size: 5vh;
+}
+
+.left {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.right {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.top {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.bottom {
+    grid-column: 3;
+    grid-row: 4;
+}
