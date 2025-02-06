@@ -115,7 +115,7 @@ script {
     align-items: center;
 }
 
-.venmoimg{
+img{
     width: 30vh;
     height: auto;
     grid-column: 2;

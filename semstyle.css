@@ -43,8 +43,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 100px 80px; 
-    padding: 10% 12%;
+    gap: 30% 20%; 
+    padding: 10% 15%;
     text-align: center;
     align-content: center;
     justify-content: center;
