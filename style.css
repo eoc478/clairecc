@@ -77,6 +77,11 @@ nav ul {
   width: 40%;
 }
 
+.name {
+    margin-left: 10px;
+    font-size: 4vh;
+}
+
 
 
 /* writing */
@@ -98,4 +103,22 @@ script {
     align-items: center;
     justify-content: center;
     font-size: 30vh;
+}
+
+
+/* ??? page */
+.venmoContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+
+.venmoimg{
+    width: 30vh;
+    height: auto;
+    grid-column: 2;
+    grid-row: 3;
+    padding: 20% 20%
 }
