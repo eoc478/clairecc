@@ -82,19 +82,23 @@
 
 
 /*image (thanks Katelyn for the help!)*/
-.gfg{
+/* .gfg{
     position: relative;
-    width: 100%
+    width: 100%;
     text-align: center;
 }
 
 .textContainer {
     position: absolute;
-    color: white;
+    color: rgb(216, 235, 255);
     font-size: 4vh;
-    left: 50%;
+    left: 20%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 0.5rem;
     text-align: center;
 }
+
+img{
+    width:20%;
+} */
