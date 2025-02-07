@@ -109,14 +109,14 @@ script {
 /* ??? page */
 .venmoContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0fr 1fr;
+    grid-template-rows: 1fr;
     text-align: center;
     align-items: center;
 }
 
 img{
-    width: 30vh;
+    width: 40vh;
     height: auto;
     grid-column: 2;
     grid-row: 3;
