@@ -5,7 +5,7 @@ const wow = "wow"
 let size = 10
 
 function preload() {
-    myFont = loadFont("/assets/comicSans.ttf");
+    myFont = loadFont("../../../assets/comicSans.ttf");
 
 }
 

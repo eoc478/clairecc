@@ -4,7 +4,7 @@ let pointArray;
 const wow = "wow"
 
 function preload() {
-    myFont = loadFont("/assets/comicSans.ttf");
+    myFont = loadFont("../../../assets/comicSans.ttf");
 
 }
 
