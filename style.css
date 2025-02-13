@@ -1,5 +1,26 @@
+
+
+
+
+@font-face {
+    font-family: oliverFont;
+    src: url(./assets/Oliver-Regular.ttf) format("truetype");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 body{
     background-color: #304a7d;
+    font-family: oliverFont, sans-serif;
 }
 
 
