@@ -29,3 +29,21 @@
 .p5 {
     margin: 80px 0px
 }
+
+
+.smallprjcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100vh;
+    font-size: 3vh;
+    height: 80vh;
+    margin-bottom: 0%;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
