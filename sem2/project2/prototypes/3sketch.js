@@ -20,7 +20,7 @@ function setup(){
 }
 
 function draw(){
-    background("black");
+    background("#322a52");
     for (let i = 0; i < customPoints.length; i++) {
         customPoints[i].update();
         customPoints[i].display();

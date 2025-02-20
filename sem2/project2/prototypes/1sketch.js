@@ -21,7 +21,7 @@ function setup(){
 }
 
 function draw(){
-    background("black");
+    background("#322a52");
     noStroke();
 
     for(let i = 0; i < confettiPieces.length; i++){
