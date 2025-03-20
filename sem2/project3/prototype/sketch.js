@@ -2,11 +2,14 @@ let capture;
 let tracker;
 let positions; 
 let center;
+
 let initialized = false;
 let isWatching = false;
 
+let countdown = 0;
+
 function setup(){
-    createCanvas(windowWidth, windowHeight).parent("prototype3");
+    createCanvas(windowWidth, windowHeight).parent("prototype3"); //how to fix stetched resolution?
     noStroke();
     capture = createCapture(VIDEO, {flipped:true}, captureCreated);
     // capture.size(width, height);
@@ -16,6 +19,8 @@ function setup(){
     tracker.init(); //initialize it
 
     center = createGraphics(width, height); //this tracker is lowk bad?
+
+    countdown = millis();
 }
 
 function captureCreated(){
@@ -36,21 +41,33 @@ function draw(){
 
      image(capture, 0, 0, width, height);
 
+     console.log(positions);
+
      if(!positions){
         isWatching = false;
-        return; //null/undefined 
-     }
-
-     if(isWatching){ //check to see if you're facing the screen
-        fill("blue")
-        circle(width/2, height/2, 50);
+        console.log("pay attention!");
+        // return; //null/undefined 
      }else{
-        fill("red")
-        circle(width/2, height/2, 50)
+        isWatching = true;
+        countdown = millis(); //reset timer
+        console.log("watching");
+
+        drawRightEye();//comment this out later
+        drawLeftEye();
      }
 
-    drawRightEye();
-    drawLeftEye();
+     if(isWatching){ //check to see if you're facing the screen, just testing
+        fill("blue");
+     }else{
+        fill("red");
+     }
+     if(!isWatching && millis() - countdown >= 10000){ //after 10 seconds
+        fill("green"); //screaming
+     }
+     circle(width/2, height/2, 50);
+
+
+
 }
 
 function drawRightEye(){
