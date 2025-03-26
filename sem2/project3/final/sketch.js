@@ -75,6 +75,7 @@ function draw(){
 
      if(isWatching){ //check to see if you're facing the screen, just testing
         fill("blue");
+        scream.stop();
         stopVideos();
      }else{
         fill("red");
