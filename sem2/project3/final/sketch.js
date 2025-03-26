@@ -17,9 +17,10 @@ let minecraft;
 function setup(){
     createCanvas(windowWidth, windowHeight).parent("prototype3"); //how to fix stetched resolution?
     noStroke();
+    imageMode(CENTER);
     capture = createCapture(VIDEO, {flipped:true}, captureCreated);
     // capture.size(width, height);
-    capture.hide(); 
+    capture.hide();
 
     tracker = new clm.tracker; //create tracker
     tracker.init(); //initialize it
@@ -58,7 +59,7 @@ function draw(){
 
     positions = tracker.getCurrentPosition();
 
-     image(capture, 0, 0, width, height);
+     image(capture, windowWidth/2, windowHeight/2, 1280, 720);
 
      console.log(positions);
 
@@ -74,11 +75,7 @@ function draw(){
 
      if(isWatching){ //check to see if you're facing the screen, just testing
         fill("blue");
-        scream.stop();
-        if(millis > attention){
-            subway.stop();
-            subway.hide();
-        }
+        stopVideos();
      }else{
         fill("red");
         if(!isWatching && millis() - countdown >= 3000){ //after 3 seconds
@@ -97,20 +94,29 @@ function loadVideos(){
         subway.play();
         subway.volume(0);
 
-        image(subway, 100, 100, 270, 480);
+        image(subway, 200, 200, 270, 480);
     }
 
     if(!isWatching && millis() - countdown >= 12000){
         minecraft.play();
         minecraft.volume(0);
 
-        image(minecraft, 500, 400, 652, 378);
+        image(minecraft, 800, 600, 652, 378);
     }
 
     if(!isWatching && millis() - countdown >= 15000){
         slime.play();
         slime.volume(0);
 
-        image(slime, 1000, 30, 576, 324);
+        image(slime, 1200, 180, 576, 324);
     }
+}
+
+function stopVideos() {
+    subway.stop();
+    slime.stop();
+    minecraft.stop();
+    subway.hide();
+    slime.hide();
+    minecraft.hide();
 }
