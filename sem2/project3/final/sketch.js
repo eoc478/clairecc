@@ -6,7 +6,6 @@ let initialized = false;
 let isWatching = false;
 
 let countdown = 0;
-let attention = 0;
 
 let scream;
 
@@ -56,27 +55,29 @@ function windowResized() { //stops making it buggy, found it on p5 reference
 
 function draw(){
     if(!initialized) return; //doesn't draw until it's been initialized
+    clear();
 
     positions = tracker.getCurrentPosition();
 
-     image(capture, windowWidth/2, windowHeight/2, 1280, 720);
+     image(capture, windowWidth/2, windowHeight/3, 800, 600);
 
      console.log(positions);
 
      if(!positions){
         isWatching = false;
-        console.log("pay attention!");
+        // console.log("pay attention!");
+        attention = millis();
         // return; //null/undefined 
      }else{
         isWatching = true;
         countdown = millis(); //reset timer
-        console.log("watching");
+        // console.log("watching");
      }
 
      if(isWatching){ //check to see if you're facing the screen, just testing
         fill("blue");
         scream.stop();
-        stopVideos();
+
      }else{
         fill("red");
         if(!isWatching && millis() - countdown >= 3000){ //after 3 seconds
@@ -86,7 +87,7 @@ function draw(){
          }
      }
   
-     circle(width/2, height/2, 50); //deleting later
+    //  circle(width/2, height/2, 50); //deleting later
 
 }
 
@@ -111,13 +112,4 @@ function loadVideos(){
 
         image(slime, 1200, 180, 576, 324);
     }
-}
-
-function stopVideos() {
-    subway.stop();
-    slime.stop();
-    minecraft.stop();
-    subway.hide();
-    slime.hide();
-    minecraft.hide();
 }
