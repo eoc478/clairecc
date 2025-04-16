@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../../../projects.css">
     <link rel="stylesheet" href="../../../../semstyle.css">
     <link rel="stylesheet" href="../../project3.css">
-    <title>Prototype</title>
+    <title>Final</title>
 </head>
 <body>
     <header>
@@ -30,7 +30,6 @@
     
 
     <!-- used this code as reference https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-     <!-- change to quizcontainer -->
     <div class="quizcontainer"> 
 
 
@@ -41,22 +40,31 @@
         </div>
 
         <div class="q2">
-            <p>how many absences have you taken this past semester?</p>
-            <p id="count1">0</p>
-            <div class="buttons">
-                <button id="decreaseBtn" onclick="dcrClick()">-</button>
-                <button id="increaseBtn" onclick="incrClick()">+</button>
-            </div>
-
+            <p>how many absences have you taken for this class?</p>
+    <!-- why do they name it radio??? spent so long trying to find this option -->
+    <!-- name to make it so that you can only select one, id for styling -->
+            <input type="radio" class="multi" name="absent" value="5">
+            <label>< 3</label>
+            <input type="radio" class="multi" name="absent" value="10">
+            <label>> 3</label>
         </div>
 
         <div class="q3">
             <p>what is your screen time?</p>
+            <input type="radio" class="multi" name="screen" value="5">
+            <label>< 2 hours</label>
+            <input type="radio" class="multi" name="screen" value="10">
+            <label>3-6 hours</label>
+            <input type="radio" class="multi" name="screen" value="15">
+            <label>7-12 hours</label>
+            <input type="radio" class="multi" name="screen" value="20">
+            <label>12+ hours</label>
+        
         </div>
 
-        <div>
+        <div class="next">
             <a href="../pg2/2.html">
-                <button id="button">next</button>
+                <button class="button">next</button>
             </a>
         </div>
         </div>

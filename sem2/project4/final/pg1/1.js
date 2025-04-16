@@ -15,10 +15,3 @@ slider.oninput = function() {
 }
 
 
-//COUNTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const decreaseBtn = document.getElementById("decreaseBtn"); //const is better for constant variable (duh), let is for variables that change
-const increaseBtn = document.getElementById("increaseBtn");
-const counter = document.getElementById("count1");
-let count = 0;
-
-decreaseBtn.addEventListener("click", changeBg)
