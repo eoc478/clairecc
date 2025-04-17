@@ -1,0 +1,95 @@
+@font-face {
+    font-family: comicSans;
+    src: url(../../assets/comicSans.ttf) format("truetype");
+}
+
+
+.quizcontainer{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 0%;
+    font-size: 3vh;
+}
+
+.q1, .q2, .q3, .pity{
+    width: 100%;
+}
+
+p{
+    font-size: smaller;
+}
+
+.question{
+    font-size: 3vh;
+    margin-bottom: -3vh;
+}
+
+label, #value{
+    font-family: comicSans, sans-serif;
+    font-size: 20px;
+}
+
+.pity p{
+    font-size: 4vh;
+    color: rgb(0, 136, 255);
+    margin-bottom: 0vh;
+    padding-bottom: 0vh;
+}
+
+#pityPoints{
+    margin-top: 0vh;
+    color: rgb(0, 136, 255);
+}
+
+#count1, #count2{
+    margin: 0vh;
+    padding-bottom: 0vh;
+}
+
+.buttons{
+    margin: 0vh;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+#final #pityPoints {
+    font-size: 30vh;
+    color: #cceeff;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  /*https://codepen.io/teerapuch/pen/vLJXeR*/
+}
+
+/* Spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#final p{
+    font-size: 10vh;
+    margin: 0vh;
+}
+
+.result p{
+    font-size: 3vh;
+}

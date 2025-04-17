@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../../../projects.css">
     <link rel="stylesheet" href="../../../../semstyle.css">
-    <link rel="stylesheet" href="../../project3.css">
+    <link rel="stylesheet" href="../../project4.css">
     <title>Final</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <p class="title">Prototype</p>
+            <p class="title">Final</p>
             <ul>
                 <a href="../../../../index.html">home</a>
                 <a href="../../../../sem1/sem1.html">semester 1</a>
@@ -28,31 +28,28 @@
 
     <h1>finals season or your final season?</h1>
     
-
-    <!-- used this code as reference https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
     <div class="quizcontainer"> 
-
-
         <div class="q1">
-            <p>how stressed are you feeling right now?</p>
+            <p class="question">how stressed are you feeling right now?</p>
             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
             <div id="value"></div>
+            <!-- used this code as reference https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
         </div>
 
         <div class="q2">
-            <p>how many absences have you taken for this class?</p>
+            <p class="question">how many absences have you taken for this class?</p>
     <!-- why do they name it radio??? spent so long trying to find this option -->
     <!-- name to make it so that you can only select one, id for styling -->
+            <input type="radio" class="multi" name="absent" value="0">
+            <label>less than 3</label>
             <input type="radio" class="multi" name="absent" value="5">
-            <label>< 3</label>
-            <input type="radio" class="multi" name="absent" value="10">
-            <label>> 3</label>
+            <label>more than 3</label>
         </div>
 
         <div class="q3">
-            <p>what is your screen time?</p>
-            <input type="radio" class="multi" name="screen" value="5">
-            <label>< 2 hours</label>
+            <p class="question">what is your screen time?</p>
+            <input type="radio" class="multi" name="screen" value="0">
+            <label>less than 2 hours</label>
             <input type="radio" class="multi" name="screen" value="10">
             <label>3-6 hours</label>
             <input type="radio" class="multi" name="screen" value="15">
@@ -62,16 +59,18 @@
         
         </div>
 
+        <div class="pity">
+            <p>pity points:</p>
+            <div id="pityPoints">0</div>
+        </div> 
+
         <div class="next">
             <a href="../pg2/2.html">
                 <button class="button">next</button>
             </a>
         </div>
-        </div>
-        <div class="pity">pity points</div> 
 
         <!-- are these too many divs? -->
-        
 
     </div>
 
